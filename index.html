@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/solarized.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section>
+						<h1 style="font-size: 120px;">Patrones Creacionales</h1>
+						<p style="font-size: 25px;">Estos patrones se utilizan para facilitar la creación de nuevos objetos que buscan incrementar la flexibilidad y reutilización del código existente. 
+							Entre los más utilizados podemos nombrar:</p>
+						<ol>
+							<li>Abstract Factory</li>
+							<li>Builder Patterns</li>
+							<li>Factory Method</li>
+							<li>Prototype</li>
+							<li>Singleton</li>
+						</ol>
+					</section>
+					<section>
+						<h1>Abstract Factory</h1>
+						<img src="./multimedia/Abstrac.png"></img>
+						<p style="font-size: 25px;">Abtract Factory es un patron comun mente utilizado para crear Familias de
+							 objetos que se relacionan sin necesidad de especificar sus clases
+							 Es decir si tenemos una pizzeria de cadena (Pizza Hut) 
+							 Tenemos un metodo de fabricacion de pizza que es propia de pizza hut (Mi Factoria Abstracta o Abstrac Factory)
+							 y Tenemos la diferencia de ingredientes segun la zona donde este ubicada, En otras palabras Mismo metodo de fabricacion de pizza
+							 pero con ingredientes concretos o locales que seria (La Factoria Concreta o Concret Factory)
+						</p>
+					</section>
+					<section>
+						<h1 style="font-size: 50px;">Builder Pattern</h1>
+						<p style="font-size: 25px;">
+							El patrón constructor se utiliza para crear diferentes objetos a partir de una serie de pasos reutilizando 
+							el código de construcción. Esto simplifica la necesidad de crear subclases para cada configuración posible 
+							de un objeto particular.
+							En este patron lo que hacemos es dividir nuestros un objeto en varia partes fundamentales para comstruirlo
+							Ej: Para hacer una casa basica necesitamos (Piso, Pared, Ventanas, Techo, Puerta) Esto se podria dividir en varios Metodos
+							Constructores Como un constructor para el piso, Otro para la pared y al final un metodo que me muestre el objeto construido
+							y teniendo en cuenta este mismo sistma podemos añadirle mas constructores segun lo que se necesite Como el tipo de material,
+							Otro que cree un garage, Etc...
+						</p>
+					</section>
+					<section>
+						<h3>Diagrama del Builder Pattern</h1>
+						<img src="./multimedia/Builder.png" style="height: 500px; width: 500px;"></img>
+					</section>
+					<section>
+						<h1>Factory Method</h1>
+						<img src="./multimedia/Factory Method.png" style="height: 300px; width: 450px;"></img>
+						<P style="font-size: 25px;">
+							Este patrón ofrece una interfaz para crear nuevos objetos dentro de una 
+							superclase permitiendo que las subclases cambien el tipo de objetos que van a crear.
+						</P>
+					</section>
+					<section>
+						<h1>Prototype</h1>
+						<img src="./multimedia/prototype.png" style="height: 300px; width: 450px;">
+						<p style="font-size: 25px;">
+							Se utiliza para crear nuevos objetos a partir de objetos existentes. 
+							A través de la declaración de una interfaz (clonar) este patrón encarga a 
+							los propios objetos la acción de clonarse.
+						</p>
+					</section>
+					<section>
+						<h1>Singleton</h1>
+						<img src="./multimedia/singleton.png">
+						<p style="font-size: 25px;">
+							Se utiliza para restringir la creación de nuevas instancias de 
+							una clase a un objeto determinado.
+						</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1 style="font-size: 120px;">Patrones Estructurales</h1>
+							<p style="font-size: 25px;">Los patrones estructurales buscan facilitar la acción de ensamblar objetos y clases dentro de clases estructurales
+								 más grandes sin perder la eficiencia y manteniendo la flexibilidad.</p>
+							<ol>
+								<li>Adapter</li>
+								<li>Bridge</li>
+								<li>Composite</li>
+								<li>Decorator</li>
+								<li>Facade</li>
+								<li>Flyweight</li>
+								<li>Proxy</li>
+							</ol>
+					</section>
+					<section>
+						<h1>Adapter</h1>
+						<img src="./multimedia/adapter.png">
+						<p style="font-size: 25px;">Adaptador es un patrón que se utiliza 
+							para que objetos con interfaces incompatibles colaboren entre sí.</p>
+					</section>
+					<section>
+						<h1>Bridge</h1>
+						<img src="./multimedia/bridge.png" style="height: 300px;">
+						<p style="font-size: 25px;">
+							El patrón Bridge resuelve un problema habitual en la herencia de clases dividiendo clases relacionadas en dos jerarquías diferentes: implementación
+							 y abstracción, para que estas puedan desarrollarse independientemente.
+						</p>
+					</section>
+					<section>
+						<h1>Composite</h1>
+						<img src="./multimedia/composite.png" style="height: 300px;">
+						<p style="font-size: 25px;">
+							Solo se recomienda utilizar Composite cuando el modelo de
+							 código está creado a partir de un sistema ramificado en forma de árbol.
+						</p>
+					</section>
+					<section>
+						<h1>Decorator</h1>
+						<img src="./multimedia/decorator.png" style="height: 300px;">
+						<p style="font-size: 25px;">
+							Se utiliza para extender el comportamiento de un objeto añadiendo funcionalidades al mismo a través de 
+							objetos encapsuladores que presentan dichas funcionalidades.
+						</p>
+					</section>
+					<section>
+						<h1>Facade</h1>
+						<img src="./multimedia/facade.png" style="height: 300px;">
+						<p style="font-size: 25px;">
+							Una fachada proporciona una interfaz simplificada para un subsistema complejo. Por ejemplo, este patrón de diseño permite integrar una aplicación con una biblioteca que
+							 tiene muchas funciones de las que solo se ocupan unas pocas.
+						</p>
+					</section>
+					<section>
+						<h1>Flyweight</h1>
+						<img src="./multimedia/flyweight.png" style="height: 300px;">
+						<p style="font-size: 25px;">
+							Ayuda a reducir el tamaño de los objetos almacenando en su interior solo el estado intrínseco (información constante) del mismo y compartiendo
+							 el resto de la información (estado extrínseco) entre varios objetos similares.
+						</p>
+					</section>
+					<section>
+						<h1>Proxy</h1>
+						<img src="./multimedia/proxy.png" style="height: 350px;">
+						<p style="font-size: 25px;">
+							Este patrón de diseño se utiliza para crear objetos sustitutos que trabajan
+							 como una interfaz hacia cualquier objeto determinado.
+						</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1 style="font-size: 120px;">Patrones de comportamiento</h1>
+						<p style="font-size: 25px;">
+							Los patrones de comportamiento buscan resolver la comunicación entre diferentes áreas
+						</p>
+						<div style="float: center;">
+							<div style="float: left;">
+								<ul>
+									<li>Chain of responsibility</li>
+									<li>Command</li>
+									<li>Interpreter</li>
+									<li>Iterator</li>
+									<li>Mediator</li>
+									<li>Memento</li>
+								</ul>
+							</div>
+							<div style="float: right;">
+								<ul>
+									<li>Observer</li>
+									<li>State</li>
+									<li>Strategy</li>
+									<li>Template method</li>
+									<li>Visitor</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+					<section>
+						<h1 style="font-size: 120px;">Chain of responsibility</h1>
+						<img src="./multimedia/Chain.png" style="height: 300px;">
+						<p style="font-size: 25px;">
+							A través de este patrón podremos evitar que la petición emitida 
+							por un emisor sea acoplada a un solo receptor
+							 permitiendo que más de un objeto pueda responder a dicha petición.
+						</p>
+					</section>
+					<section>
+						<h1 style="font-size: 120px;">Command</h1>
+						<img src="./multimedia/Command.png">
+						<p style="font-size: 25px;">
+							Se utiliza cuando es necesario encapsular dentro de un objeto
+							 todos los parámetros que una acción requiere para ejecutarse.
+						</p>
+					</section>
+					<section>
+						<h1 style="font-size: 120px;">Interpreter</h1>
+						<img src="./multimedia/Iterator.png" style="height: 300px;">
+						<p style="font-size: 25px;">
+							Utilizando Interpreter podremos evaluar un lenguaje a través de
+							 una interfaz que indique el contexto en el cual se interpreta.
+						</p>
+					</section>
+					<section>
+						<h1 style="font-size: 120px;">Iterator</h1>
+						<img src="./multimedia/Iterator.png" style="height: 300px;">
+						<p style="font-size: 25px;">
+							Este patrón de comportamiento se utiliza cuando necesitamos iterar
+							 en colecciones o conjuntos de objetos sin la necesidad de intercambiar 
+							 información relevante.
+						</p>
+					</section>
+					<section>
+						<h1 style="font-size: 120px;">Mediator</h1>
+						<img src="./multimedia/Mediator.png" style="height: 300px;">
+						<p style="font-size: 25px;">
+							Se utiliza cuando necesitamos controlar las comunicaciones directas 
+							entre objetos y disminuir sus dependencias caóticas.
+						</p>
+					</section>
+					<section>
+						<h1 style="font-size: 120px;">Memento</h1>
+						<img src="./multimedia/Memento.png">
+						<p style="font-size: 25px;">
+							Este patrón es capaz de almacenar y restaurar la información de un objeto
+						</p>
+					</section>
+					<section>
+						<h1 style="font-size: 120px;">Observer</h1>
+						<img src="./multimedia/Observer.png">
+						<p style="font-size: 25px;">
+							A través de este patrón de comportamiento varios objetos interesados (suscriptores) 
+							en un objeto en particular (notificador) pueden recibir notificaciones de su 
+							comportamiento mientras estén suscriptos a sus notificaciones.
+						</p>
+					</section>
+					<section>
+						<h1 style="font-size: 120px;">State</h1>
+						<img src="./multimedia/State.png" style="height: 300px;">
+						<p style="font-size: 25px;">
+							Se utiliza para modificar el comportamiento de una clase de objetos dependiendo 
+							del estado actual (comportamiento interno) de dichos objetos.
+						</p>
+					</section>
+					<section>
+						<h1 style="font-size: 120px;">Stategy</h1>
+						<img src="./multimedia/Strategy.png">
+						<p style="font-size: 25px;">
+							Permite separar todos los algoritmos de una clase específica en nuevas clases 
+							separadas donde los objetos pueden intercambiarse.
+						</p>
+					</section>
+					<section>
+						<h1 style="font-size: 120px;">Template method</h1>
+						<img src="./multimedia/Template.png">
+						<p style="font-size: 25px;">
+							Este patrón define el esqueleto de un algoritmo y permite a las subclases variar 
+							la implementación del comportamiento del mismo.
+						</p>
+					</section>
+					<section>
+						<h1 style="font-size: 120px;">Visitor</h1>
+						<img src="./multimedia/Visitor.png" style="height: 300px;">
+						<p style="font-size: 25px;">
+							A través de este patrón podremos introducir nuevos algoritmos sin modificar la 
+							estructura de objetos que se utilizarán para ejecutarlos.
+						</p>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
